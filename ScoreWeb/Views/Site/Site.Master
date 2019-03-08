@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta name="viewport" content="width=device-width" />
+<title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+
+<link href="/css/public.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/global.js"></script>
+
+</head>
+<body>
+<div id="dcWrap">
+ <div id="dcHead">
+ <div id="head">
+  <div class="logo"> </div>
+  <div class="nav">
+  
+   <ul class="navRight">
+    <li class="M noLeft"><a href="JavaScript:void(0);">您好，<font id="namef"></font></a>
+    </li>
+    <li class="noRight"><a href="/Users/Logout">退出</a></li>
+   </ul>
+  </div>
+ </div>
+</div>
+<!-- dcHead 结束 --> <div id="dcLeft"><div id="menu">
+ <ul class="top">
+  <li><a href="index.html"><i class="home"></i><em>管理首页</em></a></li>
+ </ul>
+  <ul id="ullist">
+  <li id="listype"><a href="/ScoreType/index"><i class="productCat"></i><em>考试类型</em></a></li>
+  <li id="liscore"><a href="/Score/index"><i class="product"></i><em>考试列表</em></a></li>
+  <li id="liusers"><a href="/Users/index"><i class="system"></i><em>用户列表</em></a></li>
+  <li id="lipage"><a href="/Home/index" target="_blank"><i class="page"></i><em>考试查询</em></a></li>
+ 
+ </ul>
+
+</div></div>
+ <div id="dcMain">
+   <!-- 当前位置 -->
+<div id="urHere"></div>   
+    <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+        <div class="navList">
+             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+             </asp:ContentPlaceHolder>
+        </div>
+     </div>
+ </div>
+<div class="clear"></div>
+<div id="dcFooter">
+ <div id="footer">
+  <div class="line"></div>
+  <ul>
+   版权所有 © 2013-2015 XXXXXXXXXXXXX有限公司，并保留所有权利。
+  </ul>
+ </div>
+</div><!-- dcFooter 结束 -->
+<div class="clear"></div> </div>
+<script>
+    function getname() {
+        $.ajax({
+            url: "/Users/GetName?" + Math.random(),
+            type: "Post",
+            dataType: "text",
+            success: function (data) {
+                $("#namef").html(data);
+            }
+        })
+    }
+    getname();
+</script>
+</body>
+</html>
+

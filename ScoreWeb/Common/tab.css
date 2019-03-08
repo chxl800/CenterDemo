@@ -1,0 +1,46 @@
+﻿
+/*********************************表格样式*******************************************/
+.tabs{
+    border: 1px solid #CAF2FF;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: #B8D3F1;
+}
+.td_bg {
+    background: #ffffff;
+}
+.th_tr {
+	font-family: "微软雅黑,Verdana, 新宋体";
+	color:#ffffff;/*标题字体色*/
+	font-size:12px;
+	font-weight:bolder;
+	background:#9e080e;/*标题背景色*/
+    line-height: 22px;
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-size:12px;
+    text-align:center;
+    height:22px;
+    line-height: 22px;
+}
+
+
+
+/*********************************分页样式*******************************************/
+/*======分页=======*/
+.paging{ height:36px; padding:25px 20px 0px 0px; display:block; clear:both; text-align:right;font-size:12px;}
+.paging a:hover{ border:1px solid #ff6600; color:#ff6600;}
+.paging_A{ height:30px; line-height:30px; border:1px solid #d7d7d7; background:#fff; padding:0px 10px 0px 20px; background:url(../images/paging.png) no-repeat; display:inline-block; color:#b1b1b1;}
+.paging_A2{ height:30px; line-height:30px; border:1px solid #d7d7d7; background:#fff; padding:0px 10px 0px 20px; background:url(../images/paging.png) no-repeat 0px -30px; display:inline-block; color:#666666;}
+.paging_B{ height:30px; line-height:30px; display:inline-block; padding:0px 10px; border:1px solid #ff6600; color:#ff6600; background:#fff;}
+.paging_B2{ height:30px; line-height:30px; display:inline-block; padding:0px 10px; border:1px solid #d7d7d7; background:#fff;}
+.paging_D{ height:28px; line-height:28px; padding:0px 5px; width:40px; background:#fff; border:1px solid #d7d7d7; margin-top:-2px;}
+.paging_C{ height:30px; line-height:30px; border:1px solid #d7d7d7; background:#fff; padding:0px 20px 0px 10px;background:url(../images/paging.png) no-repeat right -60px; display:inline-block; color:#b1b1b1;}
+.paging_C2{ height:30px; line-height:30px; border:1px solid #d7d7d7; background:#fff; padding:0px 20px 0px 10px; background:url(../images/paging.png) no-repeat right -90px; display:inline-block; color:#666666;}
+.paging_E{ width:60px; height:30px; border:1px solid #d7d7d7; background:#f1f1f1; color:#666; text-align:center; cursor:pointer;}
+.paging_E:hover{ background:#ff6600; border:1px solid #ff6600; color:#fff;}
